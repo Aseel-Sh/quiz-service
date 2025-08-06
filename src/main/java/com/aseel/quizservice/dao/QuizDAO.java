@@ -1,6 +1,6 @@
-package com.aseel.quizapp.dao;
+package com.aseel.quizservice.dao;
 
-import com.aseel.quizapp.model.Quiz;
+import com.aseel.quizservice.model.Quiz;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

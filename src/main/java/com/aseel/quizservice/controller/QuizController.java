@@ -1,8 +1,10 @@
-package com.aseel.quizapp.controller;
+package com.aseel.quizservice.controller;
 
-import com.aseel.quizapp.model.QuestionWrapper;
-import com.aseel.quizapp.model.Response;
-import com.aseel.quizapp.service.QuizService;
+
+import com.aseel.quizservice.model.QuestionWrapper;
+import com.aseel.quizservice.model.QuizDto;
+import com.aseel.quizservice.model.Response;
+import com.aseel.quizservice.service.QuizService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,8 +21,8 @@ public class QuizController {
     }
 
     @PostMapping("create")
-    public ResponseEntity<String> createQuiz(@RequestParam String category, @RequestParam int numQ, @RequestParam String title) {
-        return quizService.createQuiz(category, numQ, title);
+    public ResponseEntity<String> createQuiz(@RequestBody QuizDto quizDto) {
+        return quizService.createQuiz(quizDto.getCategory(), quizDto.getNumQ(), quizDto.getTitle());
     }
 
     @GetMapping("get/{id}")

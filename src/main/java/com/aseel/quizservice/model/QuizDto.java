@@ -1,4 +1,4 @@
-package com.aseel.quizservice.controller;
+package com.aseel.quizservice.model;
 
 import lombok.Data;
 

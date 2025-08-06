@@ -1,4 +1,4 @@
-package com.aseel.quizapp.model;
+package com.aseel.quizservice.model;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

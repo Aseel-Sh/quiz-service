@@ -1,4 +1,4 @@
-package com.aseel.quizapp.model;
+package com.aseel.quizservice.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -13,6 +13,6 @@ public class Quiz {
     private Integer id;
     private String title;
 
-    @ManyToMany
-    private List<Question> questions;
+    @ElementCollection
+    private List<Integer> questionIds;
 }
